@@ -12,10 +12,24 @@ function getAllCards() {
   return cards;
 }
 
+function createResult(value, type) {
+  const span = document.createElement('span');
+  span.id = 'hidden-card';
+  span.textContent = `the ${value} of ${type}!`;
+
+  return span;
+};
+
 const readMindBtn = document.getElementById('read-mind');
+const result = document.getElementById('result');
+
 readMindBtn.addEventListener('click', (e) => { 
   e.preventDefault();
+  console.dir(e);
+
   const cards = getAllCards();
+  const hiddenCard = createResult('4', 'clubs');
 
   readMindBtn.remove();
+  document.getElementById('result').append(hiddenCard);
 });

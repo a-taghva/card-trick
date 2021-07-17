@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Card Trick</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Trick</title>
+
+    <style>
+      #hidden-card {
+        font-weight: bold;
+      }
+    </style>
+
   </head>
   <body>
     
@@ -111,11 +118,8 @@
       </select>
     </div>
 
-    <br />
 
-    <div>
-      Your hidden card is <button id="read-mind">read my mind</button>
-    </div>
+    <p id="result">Your hidden card is <button id="read-mind">read my mind</button></p>
 
     <script src="script.js"></script>
   </body>
